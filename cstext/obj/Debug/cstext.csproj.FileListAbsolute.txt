@@ -1,0 +1,6 @@
+d:\visual studio 2015\Projects\cstext\cstext\bin\Debug\cstext.exe.config
+d:\visual studio 2015\Projects\cstext\cstext\bin\Debug\cstext.exe
+d:\visual studio 2015\Projects\cstext\cstext\bin\Debug\cstext.pdb
+d:\visual studio 2015\Projects\cstext\cstext\obj\Debug\cstext.exe
+d:\visual studio 2015\Projects\cstext\cstext\obj\Debug\cstext.pdb
+d:\visual studio 2015\Projects\cstext\cstext\obj\Debug\cstext.csprojResolveAssemblyReference.cache
