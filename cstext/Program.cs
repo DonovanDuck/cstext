@@ -42,20 +42,12 @@ namespace cstext
                             switch (a)
                             {
                                 case "s": {
-                                        Console.WriteLine("请输入两个数：");
-                                        String result = Console.ReadLine();
-                                        String[] shu = result.Split(' ');
-                                        double one = double.Parse(shu[0]);
-                                        double two = double.Parse(shu[1]);
-                                        r = jia(one, two);
+                                       double s=getS();
+                                        r = jia(s[0], s[1]);
                                         break; }
                                 case "z": {
-                                        Console.WriteLine("请输入字符串：");
-                                        String result = Console.ReadLine();
-                                        String[] shu = result.Split(' ');
-                                        string one = shu[0];
-                                        string two =shu[1];
-                                        s = one + two;
+                                       string[] b =getZ();
+                                        s = b[0] + b[1];
                                         flag = 1;
                                         break;
                                     }
@@ -69,42 +61,27 @@ namespace cstext
                             {
                                 case "s":
                                     {
-                                        Console.WriteLine("请输入两个数：");
-                                        String result = Console.ReadLine();
-                                        String[] shu = result.Split(' ');
-                                        double one = double.Parse(shu[0]);
-                                        double two = double.Parse(shu[1]);
-                                        r = jian(one, two); break;
+                                        double s=getS();
+                                        r = jian(s[0], s[1]); break;
                                     }
                                 case "z":
                                     {
-                                        Console.WriteLine("请输入字符串：");
-                                        String result = Console.ReadLine();
-                                        String[] shu = result.Split(' ');
-                                        string one = shu[0];
-                                        string two = shu[1];
-                                        s = one.Replace(two,"");
+                                        
+                                        string[] b =getZ();
+                                        s = b[0].Replace(b[1],"");
                                         flag = 1;
                                         break;
                                     }
                             }
                             break;
                         }
-                    case "*": {
-                            Console.WriteLine("请输入两个数：");
-                            String result = Console.ReadLine();
-                            String[] shu = result.Split(' ');
-                            double one = double.Parse(shu[0]);
-                            double two = double.Parse(shu[1]);
-                            r = cheng(one, two); break;
+                             case "*": {
+                            double s=getS();
+                            r = cheng(s[0], s[1]); break;
                         }
                     case "/": {
-                            Console.WriteLine("请输入两个数：");
-                            String result = Console.ReadLine();
-                            String[] shu = result.Split(' ');
-                            double one = double.Parse(shu[0]);
-                            double two = double.Parse(shu[1]);
-                            r = chu(one, two); break; }
+                            double s=getS();
+                            r = chu(s[0], s[1]); break; }
                 }
                 if (flag == 0)
                 {
@@ -114,10 +91,29 @@ namespace cstext
                 //3.选择继续还是退出
                 Console.WriteLine("继续（yes） or 退出（no）");
                 String q = Console.ReadLine();
-                //no 退出
+                //退出
                 if (q.Equals("no")) { break; }
                 //yes 继续
             }
+        }
+	private string[] getZ(){
+             string[]  b = new double[2];
+            Console.WriteLine("请输入字符串：");
+                                        String result = Console.ReadLine();
+                                        String[] shu = result.Split(' ');
+                                        b[0] = double.Parse(shu[0]);
+                                        b[1] = double.Parse(shu[1]);
+                            return b;
+        }
+
+        private double[]  getS(){
+             double[] s=new double[];
+             Console.WriteLine("请输入两个数：");
+                            String result = Console.ReadLine();
+                            String[] shu = result.Split(' ');
+                            s[0]= double.Parse(shu[0]);
+                            s[1]= double.Parse(shu[1]);
+             return s;
         }
         /// <summary>
         /// 加法
